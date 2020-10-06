@@ -182,3 +182,21 @@ body {
 .btn-buy:hover {
   box-shadow: 0 3px 5px #95a5a6;
 }
+
+@media screen and (max-width: 720px) {
+  .list-product {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .list-product {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .list-product {
+    grid-template-columns: 1fr 1fr;
+  }
+}
