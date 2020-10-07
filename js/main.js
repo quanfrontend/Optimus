@@ -16,8 +16,8 @@ $(document).ready(function () {
   $(".menu-toggler").click(function () {
     $(this).toggleClass("active");
     $(".navbar-menu").toggleClass("active");
-    $("#hide").show();
-    $("body").css("overflow", "hidden");
+    $(".hide").toggleClass("active");
+    $("body").toggleClass("active");
   });
 
   //   Hide
