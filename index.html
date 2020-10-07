@@ -8,16 +8,25 @@
     <link rel="stylesheet" href="css/style.css" />
     <!-- icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
-    <!-- Java Script -->
-    <script src="js/main.js"></script>
-    <!-- Jquery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
+    <div id="hide"></div>
+    <!-- Popup -->
+    <div id="main">
+      <div id="pop-up">
+        <button id="close-popup" onclick="hideWindow()">X</button>
+        <h1>This is our title.</h1>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia illo rerum eveniet voluptate qui dolorem consectetur, ipsa repellendus.
+          Sequi doloribus pariatur ut quas perferendis nobis maiores quis nemo praesentium repellendus?
+        </p>
+        <h3>This is footer.</h3>
+      </div>
+    </div>
     <!-- Navbar -->
     <div class="navbar-container">
       <nav class="navbar">
-        <button class="menu-toggler" onclick="menuToggler()">
+        <button class="menu-toggler" onclick="menuToggler(), hide()">
           <span></span>
           <span></span>
           <span></span>
@@ -168,66 +177,6 @@
           <div class="price">$68</div>
           <button class="btn-buy">Buy Now</button>
         </div>
-        <div class="card">
-          <div class="new">-20%</div>
-          <div class="img-product">
-            <img
-              src="https://product.hstatic.net/1000026716/product/gearvn-tai-nghe-gaming-audio-technica-ath-ag1x-666_71e88bac2e3d476db016df8334e46e5b.jpg"
-              alt="#"
-            />
-          </div>
-          <div class="content-product">Áo Thun kẻ HQ 032 - AT152</div>
-          <div class="price">$68</div>
-          <button class="btn-buy">Buy Now</button>
-        </div>
-        <div class="card">
-          <div class="new">-20%</div>
-          <div class="img-product">
-            <img
-              src="https://product.hstatic.net/1000026716/product/gearvn-tai-nghe-gaming-audio-technica-ath-ag1x-666_71e88bac2e3d476db016df8334e46e5b.jpg"
-              alt="#"
-            />
-          </div>
-          <div class="content-product">Áo Thun kẻ HQ 032 - AT152</div>
-          <div class="price">$68</div>
-          <button class="btn-buy">Buy Now</button>
-        </div>
-        <div class="card">
-          <div class="new">-15%</div>
-          <div class="img-product">
-            <img
-              src="https://product.hstatic.net/1000026716/product/gearvn-tai-nghe-gaming-audio-technica-ath-ag1x-666_71e88bac2e3d476db016df8334e46e5b.jpg"
-              alt="#"
-            />
-          </div>
-          <div class="content-product">Áo Thun kẻ HQ 032 - AT152</div>
-          <div class="price">$68</div>
-          <button class="btn-buy">Buy Now</button>
-        </div>
-        <div class="card">
-          <div class="new">-20%</div>
-          <div class="img-product">
-            <img
-              src="https://product.hstatic.net/1000026716/product/gearvn-tai-nghe-gaming-audio-technica-ath-ag1x-666_71e88bac2e3d476db016df8334e46e5b.jpg"
-              alt="#"
-            />
-          </div>
-          <div class="content-product">Áo Thun kẻ HQ 032 - AT152</div>
-          <div class="price">$68</div>
-          <button class="btn-buy">Buy Now</button>
-        </div>
-        <div class="card">
-          <div class="new">-20%</div>
-          <div class="img-product">
-            <img
-              src="https://product.hstatic.net/1000026716/product/gearvn-tai-nghe-gaming-audio-technica-ath-ag1x-666_71e88bac2e3d476db016df8334e46e5b.jpg"
-              alt="#"
-            />
-          </div>
-          <div class="content-product">Áo Thun kẻ HQ 032 - AT152</div>
-          <div class="price">$68</div>
-          <button class="btn-buy">Buy Now</button>
-        </div>
       </div>
     </div>
     <script>
@@ -237,6 +186,24 @@
         togglerMenu.classList.toggle("active");
         navbarMenu.classList.toggle("active");
       }
+
+      function showWindow() {
+        $("#main").show();
+        // Stop Scroll
+        $("body").css("overflow", "hidden");
+      }
+
+      function hideWindow() {
+        $("#main").hide();
+        // On Scroll
+        $("body").css("overflow", "scroll");
+      }
+
+      setTimeout(showWindow, 2000);
     </script>
+
+    <!-- Java Script -->
+    <script src="js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </body>
 </html>
