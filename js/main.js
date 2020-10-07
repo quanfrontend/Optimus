@@ -22,6 +22,7 @@ $(document).ready(function () {
 
   $(".popup").show();
   $("body").toggleClass("active");
+  $("html ,body").animate({ scrollTop: 0 }, 800);
 
   $("#close").click(function () {
     $(".popup").hide();
