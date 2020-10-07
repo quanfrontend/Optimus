@@ -20,5 +20,11 @@ $(document).ready(function () {
     $("body").toggleClass("active");
   });
 
-  //   Hide
+  $(".popup").show();
+  $("body").toggleClass("active");
+
+  $("#close").click(function () {
+    $(".popup").hide();
+    $("body").toggleClass("active");
+  });
 });
