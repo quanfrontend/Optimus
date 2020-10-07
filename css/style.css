@@ -14,38 +14,11 @@ body {
   width: 100%;
   height: 100vh;
   background-color: #0008;
+  z-index: 10000;
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 111;
   display: none;
-}
-
-/* Popup */
-
-#main {
-  width: 100%;
-  height: 100vh;
-  background-color: #0008;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 10000;
-  display: none;
-}
-
-#pop-up {
-  width: 400px;
-  height: 300px;
-  background-color: #fff;
-  text-align: center;
-  padding: 20px;
-  border-radius: 5px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 10000;
 }
 
 .container {
@@ -92,7 +65,7 @@ body {
   cursor: pointer;
   transition: 0.3s linear;
   display: none;
-  z-index: 999;
+  z-index: 100000;
 }
 
 .menu-toggler span {
@@ -102,7 +75,7 @@ body {
   background-color: #fff;
   margin: 5px 0;
   transition: 0.3s linear;
-  z-index: 999;
+  z-index: 100000;
 }
 
 .navbar-menu ul {
@@ -152,7 +125,7 @@ body {
     height: 100vh;
     background-color: #fff;
     transition: 0.5s ease-out;
-    z-index: 111;
+    z-index: 10000;
   }
   .navbar-menu ul {
     padding: 80px 40px;
@@ -167,6 +140,9 @@ body {
   .navbar-menu ul li a {
     color: #8e44ad;
     font-weight: 700;
+  }
+  .navbar-menu.active ul li a:hover {
+    color: #8e44ad;
   }
   .navbar-menu.active {
     left: 0;
@@ -324,17 +300,18 @@ body {
   }
 }
 
+.scrollTop {
+  width: 100%;
+  text-align: right;
+}
+
 #topBtn {
-  padding: 1rem;
+  margin-right: 15px;
+  padding: 0.5rem 20px;
   background-color: #8e44ad;
   border: none;
   color: #fff;
   font-size: 20px;
-  z-index: 100000;
-  position: relative;
   outline: none;
-  position: fixed;
-  bottom: 50px;
-  right: 50px;
   cursor: pointer;
 }

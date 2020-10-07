@@ -11,23 +11,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
+    <!-- Hide -->
     <div id="hide"></div>
-    <!-- Popup -->
-    <div id="main">
-      <div id="pop-up">
-        <button id="close-popup" onclick="hideWindow()">X</button>
-        <h1>This is our title.</h1>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia illo rerum eveniet voluptate qui dolorem consectetur, ipsa repellendus.
-          Sequi doloribus pariatur ut quas perferendis nobis maiores quis nemo praesentium repellendus?
-        </p>
-        <h3>This is footer.</h3>
-      </div>
-    </div>
+
     <!-- Navbar -->
     <div class="navbar-container">
       <nav class="navbar">
-        <button class="menu-toggler" onclick="menuToggler(), hide()">
+        <button class="menu-toggler">
           <span></span>
           <span></span>
           <span></span>
@@ -35,7 +25,7 @@
         <div class="logo">
           <a href="index.html">Optimus</a>
         </div>
-        <div class="navbar-menu" onclick="menuToggler()">
+        <div class="navbar-menu">
           <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
@@ -45,13 +35,13 @@
           </ul>
         </div>
       </nav>
-    </div>
 
-    <!-- Banner -->
-    <div class="banner">
-      <div class="banner-content">
-        <h3>Xin chào. Tôi là Quân</h3>
-        <a href="#">View more</a>
+      <!-- Banner -->
+      <div class="banner">
+        <div class="banner-content">
+          <h3>Xin chào. Tôi là Quân</h3>
+          <a href="#">View more</a>
+        </div>
       </div>
     </div>
 
@@ -179,30 +169,12 @@
           <button class="btn-buy">Buy Now</button>
         </div>
       </div>
-      <button id="topBtn"><i class="fas fa-angle-up"></i></button>
+      <div class="scrollTop">
+        <button id="topBtn">
+          <i class="fas fa-angle-up"></i>
+        </button>
+      </div>
     </div>
-    <script>
-      function menuToggler() {
-        const togglerMenu = document.querySelector(".menu-toggler");
-        const navbarMenu = document.querySelector(".navbar-menu");
-        togglerMenu.classList.toggle("active");
-        navbarMenu.classList.toggle("active");
-      }
-
-      function showWindow() {
-        $("#main").show();
-        // Stop Scroll
-        $("body").css("overflow", "hidden");
-      }
-
-      function hideWindow() {
-        $("#main").hide();
-        // On Scroll
-        $("body").css("overflow", "scroll");
-      }
-
-      // setTimeout(showWindow, 2000);
-    </script>
 
     <!-- Java Script -->
     <script type="text/javascript" src="js/main.js"></script>

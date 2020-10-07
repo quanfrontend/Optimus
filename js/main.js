@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  //    Scroll Top
   $(window).scroll(function () {
     if ($(this).scrollTop() > 40) {
       $("#topBtn").fadeIn();
@@ -10,4 +11,14 @@ $(document).ready(function () {
   $("#topBtn").click(function () {
     $("html ,body").animate({ scrollTop: 0 }, 800);
   });
+
+  //   Menu Toggler
+  $(".menu-toggler").click(function () {
+    $(this).toggleClass("active");
+    $(".navbar-menu").toggleClass("active");
+    $("#hide").show();
+    $("body").css("overflow", "hidden");
+  });
+
+  //   Hide
 });
